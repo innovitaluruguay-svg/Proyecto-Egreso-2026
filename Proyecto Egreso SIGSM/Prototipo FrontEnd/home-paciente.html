@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Información para pacientes | Hospital de Clínicas</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+  <style>
+    /* =========================
+       CONFIGURACIÓN GENERAL
+    ========================== */
+
+    body {
+      font-size: 18px;
+      line-height: 1.6;
+      background-color: #f5f7fa;
+      color: #212529;
+    }
+
+    h1,
+    h2,
+    h3 {
+      color: #17365d;
+      font-weight: 700;
+    }
+
+    /* =========================
+       NAVEGACIÓN
+    ========================== */
+
+    .navbar-brand {
+      font-size: 1.4rem;
+      font-weight: 700;
+    }
+
+    .nav-link {
+      font-size: 1.05rem;
+      font-weight: 500;
+    }
+
+    /* =========================
+       HERO
+    ========================== */
+
+    .hero {
+      background-color: #ffffff;
+      border-left: 6px solid #0d6efd;
+      border-radius: 10px;
+    }
+
+    .hero h1 {
+      font-size: 2.2rem;
+    }
+
+    .hero p {
+      font-size: 1.15rem;
+    }
+
+    /* =========================
+       BUSCADOR
+    ========================== */
+
+    .search-box {
+      background-color: #ffffff;
+      border-radius: 10px;
+      padding: 25px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    .search-box input {
+      min-height: 58px;
+      font-size: 1.1rem;
+    }
+
+    .search-button {
+      min-height: 58px;
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+
+    /* =========================
+       TARJETAS
+    ========================== */
+
+    .option-card {
+      min-height: 190px;
+      border: 1px solid #dee2e6;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .option-card:hover,
+    .option-card:focus-within {
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+    }
+
+    .option-icon {
+      font-size: 3rem;
+      color: #0d6efd;
+    }
+
+    .option-card h3 {
+      font-size: 1.3rem;
+    }
+
+    .option-card p {
+      color: #555;
+    }
+
+    .main-button {
+      min-height: 52px;
+      font-size: 1.05rem;
+      font-weight: 600;
+    }
+
+    /* =========================
+       DOCUMENTOS
+    ========================== */
+
+    .document-card {
+      background-color: #ffffff;
+      border-radius: 10px;
+      border: 1px solid #dee2e6;
+    }
+
+    .document-icon {
+      font-size: 2.2rem;
+      color: #0d6efd;
+    }
+
+    .document-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+    }
+
+    /* =========================
+       AYUDA
+    ========================== */
+
+    .help-box {
+      background-color: #ffffff;
+      border-left: 5px solid #0d6efd;
+      border-radius: 8px;
+    }
+
+    /* =========================
+       FOOTER
+    ========================== */
+
+    footer {
+      background-color: #ffffff;
+    }
+
+    footer p {
+      margin-bottom: 0;
+    }
+
+    /* =========================
+       ACCESIBILIDAD
+    ========================== */
+
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+      top: 10px;
+      z-index: 9999;
+    }
+
+    .skip-link:focus {
+      left: 10px;
+      background: #ffffff;
+      padding: 10px 15px;
+      border: 2px solid #0d6efd;
+      border-radius: 6px;
+    }
+
+    /* =========================
+       CEL ADAPTACION 
+    ========================== */
+
+    @media (max-width: 576px) {
+
+      body {
+        font-size: 17px;
+      }
+
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+
+      .hero p {
+        font-size: 1.05rem;
+      }
+
+      .option-card {
+        min-height: 170px;
+      }
+
+      .search-box {
+        padding: 18px;
+      }
+
+      .search-button {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Accesibilidad -->
+  <a href="#contenido" class="skip-link">
+    Ir al contenido principal
+  </a>
+
+  <!-- =========================
+       HEADER
+  ========================== -->
+
+  <header>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary" aria-label="Navegación principal">
+
+      <div class="container">
+
+        <a class="navbar-brand" href="home-paciente.html">
+          <i class="bi bi-hospital me-2" aria-hidden="true"></i>
+          Hospital de Clínicas
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPaciente"
+          aria-controls="menuPaciente" aria-expanded="false" aria-label="Abrir menú">
+
+          <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+        <div class="collapse navbar-collapse" id="menuPaciente">
+
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+            <li class="nav-item">
+              <a class="nav-link active" href="#inicio">
+                <i class="bi bi-house me-1"></i>
+                Inicio
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#documentos">
+                <i class="bi bi-file-earmark-text me-1"></i>
+                Documentos
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#encuestas">
+                <i class="bi bi-chat-square-heart me-1"></i>
+                Encuestas
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#ayuda">
+                <i class="bi bi-question-circle me-1"></i>
+                Ayuda
+              </a>
+            </li>
+
+          </ul>
+
+          <!-- Idioma -->
+          <div class="d-flex align-items-center">
+
+            <button class="btn btn-outline-light me-2" type="button" aria-label="Español">
+              ES
+            </button>
+
+            <button class="btn btn-outline-light" type="button" aria-label="English">
+              EN
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </nav>
+
+  </header>
+
+
+  <!-- =========================
+       CONTENIDO
+  ========================== -->
+
+  <main id="contenido" class="container my-4">
+
+
+    <!-- =========================
+         BIENVENIDA 
+    ========================== -->
+
+    <section id="inicio" class="mb-4">
+
+      <div class="hero shadow-sm">
+
+        <div class="p-4 p-md-5">
+
+          <p class="text-primary fw-bold mb-2">
+            Portal de información para pacientes
+          </p>
+
+          <h1>
+            Información para pacientes
+          </h1>
+
+          <p class="mb-0">
+            Consulte documentos, indicaciones y otra información
+            proporcionada por el Hospital de Clínicas.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         BUSCADOR
+    ========================== -->
+
+    <section class="mb-5" aria-labelledby="titulo-busqueda">
+
+      <div class="search-box">
+
+        <h2 id="titulo-busqueda" class="h3 mb-3">
+          Buscar información
+        </h2>
+
+        <form id="formBusqueda">
+
+          <div class="row g-2">
+
+            <div class="col-12 col-md-9">
+
+              <label for="busqueda" class="visually-hidden">
+                Buscar información
+              </label>
+
+              <input type="search" id="busqueda" class="form-control" placeholder="Ejemplo: ecocardiograma"
+                autocomplete="off">
+
+            </div>
+
+            <div class="col-12 col-md-3">
+
+              <button type="submit" class="btn btn-primary search-button w-100">
+
+                <i class="bi bi-search me-2"></i>
+                Buscar
+
+              </button>
+
+            </div>
+
+          </div>
+
+        </form>
+
+        <div id="resultadoBusqueda" class="mt-3"></div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         ACCESOS PRINCIPALES
+    ========================== -->
+
+    <section class="mb-5" aria-labelledby="titulo-opciones">
+
+      <h2 id="titulo-opciones" class="h3 mb-3">
+        ¿Qué necesita?
+      </h2>
+
+      <div class="row g-4">
+
+
+        <!-- Documentos -->
+
+        <div class="col-12 col-md-6">
+
+          <a href="#documentos" class="card option-card text-decoration-none text-dark shadow-sm h-100">
+
+            <div class="card-body text-center p-4">
+
+              <i class="bi bi-file-earmark-text option-icon" aria-hidden="true">
+              </i>
+
+              <h3 class="mt-3">
+                Documentos para pacientes
+              </h3>
+
+              <p>
+                Consulte información e indicaciones
+                proporcionadas por el hospital.
+              </p>
+
+              <span class="btn btn-primary main-button">
+                Ver documentos
+              </span>
+
+            </div>
+
+          </a>
+
+        </div>
+
+
+        <!-- Indicaciones -->
+
+        <div class="col-12 col-md-6">
+
+          <a href="#documentos" class="card option-card text-decoration-none text-dark shadow-sm h-100">
+
+            <div class="card-body text-center p-4">
+
+              <i class="bi bi-clipboard2-check option-icon" aria-hidden="true">
+              </i>
+
+              <h3 class="mt-3">
+                Indicaciones para estudios
+              </h3>
+
+              <p>
+                Consulte las indicaciones necesarias
+                antes de realizar un estudio.
+              </p>
+
+              <span class="btn btn-outline-primary main-button">
+                Ver indicaciones
+              </span>
+
+            </div>
+
+          </a>
+
+        </div>
+
+
+        <!-- Encuestas  -->
+
+        <div class="col-12 col-md-6">
+
+          <a href="#encuestas" class="card option-card text-decoration-none text-dark shadow-sm h-100">
+
+            <div class="card-body text-center p-4">
+
+              <i class="bi bi-chat-square-heart option-icon" aria-hidden="true">
+              </i>
+
+              <h3 class="mt-3">
+                Encuestas de satisfacción
+              </h3>
+
+              <p>
+                Comparta su experiencia para ayudar
+                a mejorar los servicios del hospital.
+              </p>
+
+              <span class="btn btn-outline-primary main-button">
+                Ver encuestas
+              </span>
+
+            </div>
+
+          </a>
+
+        </div>
+
+
+        <!-- Ayuda -->
+
+        <div class="col-12 col-md-6">
+
+          <a href="#ayuda" class="card option-card text-decoration-none text-dark shadow-sm h-100">
+
+            <div class="card-body text-center p-4">
+
+              <i class="bi bi-question-circle option-icon" aria-hidden="true">
+              </i>
+
+              <h3 class="mt-3">
+                Ayuda
+              </h3>
+
+              <p>
+                Consulte cómo utilizar este portal
+                o solicite asistencia.
+              </p>
+
+              <span class="btn btn-outline-primary main-button">
+                Ver ayuda
+              </span>
+
+            </div>
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         DOCUMENTOS
+    ========================== -->
+
+    <section id="documentos" class="mb-5" aria-labelledby="titulo-documentos">
+
+      <h2 id="titulo-documentos" class="h3 mb-2">
+        Información disponible
+      </h2>
+
+      <p class="text-muted mb-4">
+        Seleccione un documento para consultar su contenido.
+      </p>
+
+
+      <div class="row g-3">
+
+
+        <!-- Documento 1 -->
+
+        <div class="col-12">
+
+          <article class="document-card shadow-sm p-3">
+
+            <div class="row align-items-center g-3">
+
+              <div class="col-12 col-md">
+
+                <div class="d-flex align-items-start">
+
+                  <i class="bi bi-file-earmark-text document-icon me-3" aria-hidden="true">
+                  </i>
+
+                  <div>
+
+                    <h3 class="document-title mb-1">
+                      Preparación para estudios imagenológicos
+                    </h3>
+
+                    <p class="mb-0 text-muted">
+                      Información para pacientes antes
+                      de realizar estudios.
+                    </p>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+              <div class="col-12 col-md-auto">
+
+                <a href="documento.html?id=1" class="btn btn-primary main-button w-100">
+
+                  <i class="bi bi-eye me-1"></i>
+                  Ver documento
+
+                </a>
+
+              </div>
+
+            </div>
+
+          </article>
+
+        </div>
+
+
+        <!-- Documento 2 -->
+
+        <div class="col-12">
+
+          <article class="document-card shadow-sm p-3">
+
+            <div class="row align-items-center g-3">
+
+              <div class="col-12 col-md">
+
+                <div class="d-flex align-items-start">
+
+                  <i class="bi bi-file-earmark-text document-icon me-3" aria-hidden="true">
+                  </i>
+
+                  <div>
+
+                    <h3 class="document-title mb-1">
+                      Indicaciones para ecocardiograma
+                    </h3>
+
+                    <p class="mb-0 text-muted">
+                      Información y preparación para el estudio.
+                    </p>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+              <div class="col-12 col-md-auto">
+
+                <a href="documento.html?id=2" class="btn btn-primary main-button w-100">
+
+                  <i class="bi bi-eye me-1"></i>
+                  Ver documento
+
+                </a>
+
+              </div>
+
+            </div>
+
+          </article>
+
+        </div>
+
+
+        <!-- Documento 3 -->
+
+        <div class="col-12">
+
+          <article class="document-card shadow-sm p-3">
+
+            <div class="row align-items-center g-3">
+
+              <div class="col-12 col-md">
+
+                <div class="d-flex align-items-start">
+
+                  <i class="bi bi-file-earmark-text document-icon me-3" aria-hidden="true">
+                  </i>
+
+                  <div>
+
+                    <h3 class="document-title mb-1">
+                      Prevención de infecciones
+                    </h3>
+
+                    <p class="mb-0 text-muted">
+                      Recomendaciones generales para pacientes.
+                    </p>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+              <div class="col-12 col-md-auto">
+
+                <a href="documento.html?id=3" class="btn btn-primary main-button w-100">
+
+                  <i class="bi bi-eye me-1"></i>
+                  Ver documento
+
+                </a>
+
+              </div>
+
+            </div>
+
+          </article>
+
+        </div>
+
+
+        <!-- Documento 4 -->
+
+        <div class="col-12">
+
+          <article class="document-card shadow-sm p-3">
+
+            <div class="row align-items-center g-3">
+
+              <div class="col-12 col-md">
+
+                <div class="d-flex align-items-start">
+
+                  <i class="bi bi-file-earmark-text document-icon me-3" aria-hidden="true">
+                  </i>
+
+                  <div>
+
+                    <h3 class="document-title mb-1">
+                      Indicaciones de enfermería
+                    </h3>
+
+                    <p class="mb-0 text-muted">
+                      Información y recomendaciones
+                      para pacientes.
+                    </p>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+              <div class="col-12 col-md-auto">
+
+                <a href="documento.html?id=4" class="btn btn-primary main-button w-100">
+
+                  <i class="bi bi-eye me-1"></i>
+                  Ver documento
+
+                </a>
+
+              </div>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         ENCUESTAS
+    ========================== -->
+
+    <section id="encuestas" class="mb-5" aria-labelledby="titulo-encuestas">
+
+      <h2 id="titulo-encuestas" class="h3 mb-2">
+        Encuestas de satisfacción
+      </h2>
+
+      <p class="text-muted">
+        Su opinión ayuda al Hospital de Clínicas a mejorar
+        la atención y los servicios brindados.
+      </p>
+
+      <div class="alert alert-primary">
+
+        <i class="bi bi-info-circle me-2"></i>
+
+        Las encuestas pueden ser anónimas.
+        No es necesario iniciar sesión para responderlas.
+
+      </div>
+
+      <div class="row g-3">
+
+
+        <div class="col-12 col-md-6">
+
+          <div class="card shadow-sm h-100">
+
+            <div class="card-body p-4">
+
+              <i class="bi bi-heart-pulse option-icon"></i>
+
+              <h3 class="h4 mt-3">
+                Emergencia
+              </h3>
+
+              <p>
+                Valore la atención recibida en el servicio
+                de emergencia.
+              </p>
+
+              <a href="encuesta.html?seccion=emergencia" class="btn btn-primary main-button w-100">
+
+                Responder encuesta
+
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="col-12 col-md-6">
+
+          <div class="card shadow-sm h-100">
+
+            <div class="card-body p-4">
+
+              <i class="bi bi-person-lines-fill option-icon"></i>
+
+              <h3 class="h4 mt-3">
+                Consultas externas
+              </h3>
+
+              <p>
+                Valore la atención recibida durante su consulta.
+              </p>
+
+              <a href="encuesta.html?seccion=consultas" class="btn btn-primary main-button w-100">
+
+                Responder encuesta
+
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="col-12 col-md-6">
+
+          <div class="card shadow-sm h-100">
+
+            <div class="card-body p-4">
+
+              <i class="bi bi-bandaid option-icon"></i>
+
+              <h3 class="h4 mt-3">
+                Enfermería
+              </h3>
+
+              <p>
+                Valore la atención y los cuidados recibidos.
+              </p>
+
+              <a href="encuesta.html?seccion=enfermeria" class="btn btn-primary main-button w-100">
+
+                Responder encuesta
+
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="col-12 col-md-6">
+
+          <div class="card shadow-sm h-100">
+
+            <div class="card-body p-4">
+
+              <i class="bi bi-droplet option-icon"></i>
+
+              <h3 class="h4 mt-3">
+                Laboratorio
+              </h3>
+
+              <p>
+                Valore la atención recibida al realizar
+                sus análisis.
+              </p>
+
+              <a href="encuesta.html?seccion=laboratorio" class="btn btn-primary main-button w-100">
+
+                Responder encuesta
+
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         AYUDA
+    ========================== -->
+
+    <section id="ayuda" class="mb-5" aria-labelledby="titulo-ayuda">
+
+      <div class="help-box shadow-sm p-4">
+
+        <h2 id="titulo-ayuda" class="h3">
+          ¿Necesita ayuda?
+        </h2>
+
+        <p>
+          Si tiene dificultades para utilizar este portal,
+          solicite asistencia al personal del Hospital de Clínicas.
+        </p>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
+  <footer class="border-top py-4">
+
+    <div class="container text-center">
+
+      <p class="fw-semibold">
+        Hospital de Clínicas
+      </p>
+
+      <p class="text-muted">
+        Portal de información para pacientes
+      </p>
+
+    </div>
+
+  </footer>
+
+
+  <!-- Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+  <!-- =========================
+       BUSCADOR
+  ========================== -->
+
+  <script>
+
+    const documentos = [
+
+      {
+        id: 1,
+        titulo: "Preparación para estudios imagenológicos",
+        descripcion: "Información para pacientes antes de realizar estudios.",
+        url: "documento.html?id=1"
+      },
+
+      {
+        id: 2,
+        titulo: "Indicaciones para ecocardiograma",
+        descripcion: "Información y preparación para el estudio.",
+        url: "documento.html?id=2"
+      },
+
+      {
+        id: 3,
+        titulo: "Prevención de infecciones",
+        descripcion: "Recomendaciones generales para pacientes.",
+        url: "documento.html?id=3"
+      },
+
+      {
+        id: 4,
+        titulo: "Indicaciones de enfermería",
+        descripcion: "Información y recomendaciones para pacientes.",
+        url: "documento.html?id=4"
+      }
+
+    ];
+
+
+    document
+      .getElementById("formBusqueda")
+      .addEventListener("submit", function (event) {
+
+        event.preventDefault();
+
+        const texto =
+          document
+            .getElementById("busqueda")
+            .value
+            .toLowerCase()
+            .trim();
+
+        const resultado =
+          document.getElementById("resultadoBusqueda");
+
+
+        if (texto === "") {
+
+          resultado.innerHTML = `
+            <div class="alert alert-warning">
+              Escriba qué información desea buscar.
+            </div>
+          `;
+
+          return;
+        }
+
+
+        const encontrados =
+          documentos.filter(documento =>
+            documento.titulo.toLowerCase().includes(texto) ||
+            documento.descripcion.toLowerCase().includes(texto)
+          );
+
+
+        if (encontrados.length === 0) {
+
+          resultado.innerHTML = `
+            <div class="alert alert-secondary">
+              No encontramos documentos relacionados con
+              <strong>${texto}</strong>.
+              <br>
+              Puede intentar con otra palabra.
+            </div>
+          `;
+
+          return;
+        }
+
+
+        let html = `
+          <div class="mt-3">
+            <h3 class="h5">
+              Resultados de búsqueda
+            </h3>
+          </div>
+        `;
+
+
+        encontrados.forEach(documento => {
+
+          html += `
+            <div class="card mt-2 shadow-sm">
+              <div class="card-body">
+
+                <h4 class="h5">
+                  <i class="bi bi-file-earmark-text text-primary me-2"></i>
+                  ${documento.titulo}
+                </h4>
+
+                <p>
+                  ${documento.descripcion}
+                </p>
+
+                <a
+                  href="${documento.url}"
+                  class="btn btn-primary main-button">
+
+                  Ver documento
+
+                </a>
+
+              </div>
+            </div>
+          `;
+
+        });
+
+
+        resultado.innerHTML = html;
+
+      });
+
+  </script>
+
+</body>
+
+</html>
