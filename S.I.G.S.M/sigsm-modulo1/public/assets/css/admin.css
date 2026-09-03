@@ -1,0 +1,123 @@
+.admin-navbar {
+    background-color: #ffffff;
+    border-bottom: 1px solid #dee2e6;
+
+    position: sticky;
+    top: 0;
+    z-index: 1030;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+
+.logo-navbar {
+    height: 100px;
+    width: auto;
+    max-width: 150px;
+
+    object-fit: contain;
+
+    display: block;
+}
+
+.panel-titulo {
+    margin-left: 12px;
+
+    font-size: 1.08rem;
+    font-weight: 700;
+
+    color: #26aae1;
+
+    white-space: nowrap;
+}
+
+
+.admin-brand {
+    text-decoration: none;
+}
+
+.admin-link {
+    color: #000914 !important;
+
+    font-weight: 700;
+
+    font-size: 0.98rem;
+
+    padding: 10px 12px !important;
+
+    transition: all 0.2s ease;
+}
+
+
+.admin-link:hover {
+    color: #26aae1 !important;
+
+    background-color: #f1f6ff;
+
+    border-radius: 8px;
+}
+
+
+.admin-user {
+    color: #26aae1;
+}
+
+
+.admin-user-text {
+    font-size: 0.9rem;
+
+    font-weight: 600;
+
+    color: #26aae1;
+}
+
+
+.rol-text {
+    font-weight: 500;
+
+    color: #6c757d;
+}
+
+
+.admin-user .btn {
+    font-weight: 600;
+}
+
+
+
+
+
+
+
+@media (max-width: 991px) {
+
+    .admin-navbar {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+
+    .logo-navbar {
+        height: 100px;
+        max-width: 125px;
+    }
+
+
+    .panel-titulo {
+        font-size: 1rem;
+    }
+
+
+    .admin-link {
+        padding: 10px 8px !important;
+    }
+
+
+    .admin-user {
+        padding-top: 10px;
+        padding-bottom: 5px;
+
+        border-top: 1px solid #dee2e6;
+    }
+
+}
