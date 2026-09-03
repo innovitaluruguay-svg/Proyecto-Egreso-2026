@@ -1,0 +1,172 @@
+body {
+    font-size: 18px;
+    line-height: 1.6;
+    background: #f5f7fa;
+    color: #212529;
+}
+
+h1,
+h2,
+h3 {
+    color: #17365d;
+    font-weight: 700;
+}
+
+.paciente-navbar {
+    background: #fff;
+    border-bottom: 1px solid #e9ecef;
+    position: sticky;
+    top: 0;
+    z-index: 1030;
+}
+
+.paciente-navbar .navbar-brand {
+    color: #17365d;
+    display: flex;
+    align-items: center;
+}
+
+.paciente-navbar .brand-logo {
+    height: 100px;
+    margin-right: .1rem;
+}
+
+.paciente-navbar .brand-label {
+    color: #26aae1;
+    font-weight: 700;
+    font-size: 1rem;
+    margin-left: .5rem;
+}
+
+.paciente-navbar .nav-link {
+    color: #212529;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: .95rem;
+    padding: .5rem 1.15rem;
+    transition: color .15s ease;
+}
+
+.paciente-navbar .nav-link i {
+    font-size: 1.35rem;
+    color: #26aae1;
+    margin-bottom: 3px;
+}
+
+.paciente-navbar .nav-link:hover,
+.paciente-navbar .nav-link:focus {
+    color: #26aae1;
+}
+
+.paciente-navbar .nav-link.active {
+    color: #26aae1;
+}
+
+.hero {
+    background: #fff;
+    border-left: 6px solid #26aae1;
+    border-radius: 10px;
+}
+
+.search-box {
+    background: #fff;
+    border-radius: 10px;
+    padding: 25px;
+}
+
+.document-card {
+    background: #fff;
+    border-radius: 10px;
+    border: 1px solid #dee2e6;
+}
+
+.document-icon {
+    font-size: 2.2rem;
+    color: #26aae1;
+}
+
+.help-box {
+    background: #fff;
+    border-left: 5px solid #26aae1;
+    border-radius: 8px;
+}
+
+.option-card {
+    transition: .15s;
+}
+
+.option-card:hover {
+    transform: translateY(-3px);
+}
+
+.document-viewer {
+    background: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.pdf-viewer {
+    display: block;
+    width: 100%;
+    height: 80vh;
+    min-height: 500px;
+    border: none;
+}
+
+@media (min-width: 992px) {
+    .document-viewer {
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+
+    .pdf-viewer {
+        height: 80vh;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 991px) {
+    .pdf-viewer {
+        height: 75vh;
+    }
+}
+
+@media (max-width: 576px) {
+    body {
+        font-size: 17px;
+    }
+
+    .search-box {
+        padding: 18px;
+    }
+
+    .paciente-navbar .brand-logo {
+        height: 60px;
+    }
+
+    .paciente-navbar .brand-label {
+        font-size: .9rem;
+    }
+
+    .paciente-navbar .nav-link {
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 8px;
+        padding: .6rem 0;
+    }
+
+    .paciente-navbar .nav-link i {
+        margin-bottom: 0;
+    }
+
+    .document-viewer {
+        border-radius: 6px;
+    }
+
+    .pdf-viewer {
+        height: 70vh;
+        min-height: 450px;
+    }
+}
